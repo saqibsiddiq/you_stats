@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 # Database connection settings
-DB_CONN_STRING = "dbname='youtube_stats_db' user='postgres' host='localhost' password='saqib@7977'"
+DB_CONN_STRING = os.getenv("DATABASE_URL")
 
 def fetch_channel_data(channel_id):
     """
