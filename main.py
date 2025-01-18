@@ -9,7 +9,7 @@ import os
 load_dotenv()
 API_KEY = os.getenv("YOUTUBE_API_KEY")
 
-CONN_STRING = "dbname='youtube_stats_db' user='postgres' host='localhost' password='saqib@7977'"
+CONN_STRING = os.getenv("DATABASE_URL")
 
 def clean_title(title):
     return title.encode('utf-8', 'ignore').decode('utf-8')
